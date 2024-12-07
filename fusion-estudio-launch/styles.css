@@ -1,0 +1,76 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: lime;
+}
+
+.container {
+  position: relative;
+  width: 80%;
+  height: 80%;
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border: 2px solid lime;
+  overflow: hidden;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hacked-message {
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  animation: glitch 1s infinite;
+}
+
+.text {
+  font-size: 50px;
+  text-align: center;
+  animation: glitch 1.5s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: -2px -2px 0 rgba(0, 255, 0, 0.7), 2px 2px 0 rgba(0, 255, 0, 0.7);
+    transform: translate(2px, -2px);
+  }
+  20% {
+    text-shadow: -4px -4px 0 rgba(0, 255, 0, 0.7), 4px 4px 0 rgba(0, 255, 0, 0.7);
+    transform: translate(-2px, 4px);
+  }
+  40% {
+    text-shadow: -6px -6px 0 rgba(0, 255, 0, 0.7), 6px 6px 0 rgba(0, 255, 0, 0.7);
+    transform: translate(4px, 6px);
+  }
+  60% {
+    text-shadow: -8px -8px 0 rgba(0, 255, 0, 0.7), 8px 8px 0 rgba(0, 255, 0, 0.7);
+    transform: translate(-6px, -6px);
+  }
+  80% {
+    text-shadow: -10px -10px 0 rgba(0, 255, 0, 0.7), 10px 10px 0 rgba(0, 255, 0, 0.7);
+    transform: translate(2px, 4px);
+  }
+  100% {
+    text-shadow: -2px -2px 0 rgba(0, 255, 0, 0.7), 2px 2px 0 rgba(0, 255, 0, 0.7);
+    transform: translate(0, 0);
+  }
+}
